@@ -1,0 +1,96 @@
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#121212, #212b46);
+}
+.title{
+    font-size: 85px;
+    color: white;
+    animation: flipTitle 2s;
+}
+@keyframes flipTitle {
+    from{
+        transform: rotateX(90deg);
+    }
+    to{
+        transform: rotateX(0deg);
+    }   
+}
+.containerInput{
+    background-color: rgba(255,255,255,0.2);
+    padding: 15px;
+    margin: 34px 0;
+    display: flex;
+    border-radius: 8px;  /* arredonda a borda */
+    box-shadow: 1px 3px 8px rgba(0,0,0,0.5);
+}
+.containerInput input{
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    color: #fff;
+    outline: none;  /* tira a linha que fica na hora de digitar algo na caixa */
+    margin-right: 8px;
+}
+
+.containerInput input::placeholder{
+    color: #f1f1f1;
+}
+.buttonSearch{
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* ao passar o mouse em cima habilita a maozinha*/
+    transition: transform 0.5s; /* animação do zoom*/
+}
+.buttonSearch:hover{
+    transform: scale(1.2); /* ao passar o mouse em cima do botão ele dá um zoom*/
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FFF;
+    width: 500px;
+    border-radius: 8px;
+}
+.main h2{
+    margin: 16px 0;
+    font-size: 39px;
+}
+.main span{
+    margin-bottom: 16px; /* espaçamento entre os itens*/
+    font-weight: bold; /* negrito */ 
+}
+
+@media (max-width: 600px){
+    .title{
+        font-size: 60px;
+    }
+    .main h2{
+        font-size: 28px;
+    }
+    .main {
+
+        width: 80%;
+    }
+}
+
+@media (max-width: 421px){
+    .title{
+        font-size: 40px;
+    }
+    .main h2{
+        font-size: 20px;
+    }
+    .main {
+
+        width: 80%;
+    }
+}
